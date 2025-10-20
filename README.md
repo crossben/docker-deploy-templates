@@ -5,8 +5,8 @@
     <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="Next.js" width="40" />
     <img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS" width="40" />
     <img src="https://cdn.simpleicons.org/astro/FF5D01" alt="Astro" width="40" />
-    <img src="https://cdn.simpleicons.org/vuejs/4FC08D" alt="Vue.js" width="40" />
-    <img src="https://cdn.simpleicons.org/express/000000" alt="Express.js" width="40" />
+    <img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue.js" width="40" />
+        <img src="https://cdn.simpleicons.org/express/FFFFFF" alt="Express.js" width="40" />
     <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" width="40" />
     <img src="https://cdn.simpleicons.org/rubyonrails/CC0000" alt="Ruby on Rails" width="40" />
 </p>
