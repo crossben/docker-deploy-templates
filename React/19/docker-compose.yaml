@@ -1,0 +1,15 @@
+# if your system tells you this line below is obsolete, you can delete it
+version: '3.8'
+
+services:
+  web:
+    build: . # this should point to the folder containing your Dockerfile
+    container_name: react_19_web # change this to your app or version
+    ports:
+      - "3000" # exposes container's port 3000 to host
+    volumes:
+      - .:/app # mount local files into container (dev mode)
+    environment:
+      - NODE_ENV=development
+    stdin_open: true # keeps container running for interactive use
+    tty: true

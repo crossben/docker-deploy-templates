@@ -1,0 +1,38 @@
+# if your system tells you this line below is obsolete, you can delete it
+version: '3.8'
+
+services:
+  web:
+    build: . # this should point to the folder containing your Dockerfile (typically the Symfony project root)
+    container_name: symfony_5_web # change this to reflect your version or project
+    ports:
+      - "80" # maps Apache inside the container to a random local port
+    volumes:
+      - .:/var/www/html # mounts your local Symfony project into the container
+
+    # if you use a .env file for DB config, you can comment or remove the block below
+    environment:
+      - APP_ENV=dev
+      - DATABASE_URL=mysql://root:root@db:3306/symfony
+
+    # if you connect to an external DB or use your .env config, comment out the line below
+    depends_on:
+      - db
+
+  # if you are using your own database or .env handles it, comment or delete the db service below
+  db:
+    image: mysql:8.0
+    container_name: symfony_5_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: symfony
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+# delete this only if you're not using the internal db service
+volumes:
+  db_data:
+    driver: local

@@ -1,0 +1,39 @@
+# if your system tells you this line below is obsolete, you can delete it
+version: '3.8'
+
+services:
+  web:
+    build: . # this should point to the folder containing your Dockerfile
+    container_name: replace-with-your-app-name # update this per version/project
+    ports:
+      - "3000" # maps container's port 3000 to a random port on the host
+    volumes:
+      - .:/app # mounts your local project folder for live reload (useful in dev)
+    stdin_open: true
+    tty: true
+
+    # if you use a .env file, comment/uncomment accordingly
+    environment:
+      - NODE_ENV=development
+
+    # uncomment the lines below if you want to wait for a DB service
+    # depends_on:
+    #   - db
+
+  # Optional database service (comment or remove if not needed)
+  # db:
+  #   image: postgres:14
+  #   container_name: nestjs_db
+  #   environment:
+  #     POSTGRES_USER: root
+  #     POSTGRES_PASSWORD: root
+  #     POSTGRES_DB: nest
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# Uncomment only if using database volumes
+# volumes:
+#   pgdata:
+#     driver: local

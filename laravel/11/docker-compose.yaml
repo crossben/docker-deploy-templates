@@ -1,0 +1,40 @@
+# if your system tell you this line below is obsolete, you can delete it
+version: '3.8'
+
+services:
+  web:
+    build: . # this should point to the directory containing your Dockerfile typically the root of your project
+    container_name: replace-with-your-app-name # change this to your desired container name
+    ports:
+      - "80" # this mean docker will regenerate a random port on host machine and map it to container's Apache port wich is typically 80
+    volumes:
+      - .:/var/www/html
+    # if you are using the .env file make sure to comment the environment section below
+    environment:
+      - APP_ENV=local
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=laravel
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
+
+    # if you connect to a database from your .env file, make sure to comment the line below
+    depends_on:
+      - db
+
+  # if you connect to a database from your .env file, make sure to comment the db service below
+  db:
+    image: mysql:8.0
+    container_name: replace-with-your-db-name # change this to your desired database container name
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+# delete this only if you are using your .env file to connect to a database
+volumes:
+  db_data:
+    driver: local

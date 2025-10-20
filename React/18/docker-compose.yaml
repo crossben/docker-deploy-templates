@@ -1,0 +1,18 @@
+# if your system tells you this line below is obsolete, you can delete it
+version: '3.8'
+
+services:
+  web:
+    build: . # this should point to the folder containing your Dockerfile
+    container_name: replace-with-your-app-name # change this name to match your app/version
+    ports:
+      - "3000" # this exposes port 3000 from container to a random host port
+    volumes:
+      - .:/app # mounts your code into the container for live reload (dev only)
+    stdin_open: true # keeps the container running for interactive use
+    tty: true
+
+    # if you use environment variables, you can define them here or use .env
+    environment:
+      - NODE_ENV=development
+      - PORT=3000

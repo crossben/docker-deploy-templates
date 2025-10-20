@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: . # this should point to the directory containing your Dockerfile typically the root of your project
+      dockerfile: Dockerfile # make sure your Dockerfile is named correctly
+    container_name: replace-with-your-app-name # change this to your desired container name
+    ports:
+      - "80"  # this mean docker will regenerate a random port on host machine and map it to container's Apache port wich is typically 80
+    volumes:
+      - .:/var/www # ensure your application code is correctly mapped
+    networks:
+      - laravel_network # ensure this network is defined in your docker-compose file

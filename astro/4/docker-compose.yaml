@@ -1,0 +1,15 @@
+# if your system tells you this line below is obsolete, you can delete it
+version: '3.8'
+
+services:
+  web:
+    build: . # this should point to the directory with your Dockerfile
+    container_name: astro_4_web # rename as needed
+    ports:
+      - "4321" # maps container's port 4321 to host (Astro dev server)
+    volumes:
+      - .:/app # mount local files for live reload in development
+    stdin_open: true
+    tty: true
+    environment:
+      - NODE_ENV=development
