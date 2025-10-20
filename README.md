@@ -1,14 +1,15 @@
 <p align="center">
     <img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel" width="40" />
-    <img src="https://cdn.simpleicons.org/symfony/FFFFFF" alt="Symfony" width="40" />
-    <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" />
-    <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="Next.js" width="40" />
-    <img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS" width="40" />
-    <img src="https://cdn.simpleicons.org/astro/FF5D01" alt="Astro" width="40" />
-    <img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue.js" width="40" />
-        <img src="https://cdn.simpleicons.org/express/FFFFFF" alt="Express.js" width="40" />
-    <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" width="40" />
-    <img src="https://cdn.simpleicons.org/rubyonrails/CC0000" alt="Ruby on Rails" width="40" />
+      <img src="https://cdn.simpleicons.org/symfony/FFFFFF" alt="Symfony" width="40" />
+      <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" />
+      <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="Next.js" width="40" />
+      <img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS" width="40" />
+      <img src="https://cdn.simpleicons.org/astro/FF5D01" alt="Astro" width="40" />
+      <img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue.js" width="40" />
+      <img src="https://cdn.simpleicons.org/express/FFFFFF" alt="Express.js" width="40" />
+      <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" width="40" />
+      <img src="https://cdn.simpleicons.org/rubyonrails/CC0000" alt="Ruby on Rails" width="40" />
+      <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" width="40" />
 </p>
 
 # 🚀 Docker Boilerplates for Your Web Projects
@@ -59,6 +60,7 @@ To use these Docker templates:
 | Express.js    | [4](express/4), [5](express/5) *(future-proof)*   | [`/express/`](express)     |
 | Django        | [4](django/4), [5](django/5)                      | [`/django/`](django)       |
 | Ruby on Rails | [7](ruby/7), [8](ruby/8) *(pre-release ready)*  | [`/ruby/`](ruby)         |
+| Static HTML    | [1](html/1)                                 | [`/html/`](html)           |
 
 
 
