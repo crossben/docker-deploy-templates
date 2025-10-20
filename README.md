@@ -48,19 +48,19 @@ To use these Docker templates:
 
 ## 📂 Supported Frameworks and Versions
 
-| Framework     | Versions                                   | Folder Path            |
-|---------------|--------------------------------------------|------------------------|
+| Framework     |                  Versions                            |       Folder Path          |
+|---------------|------------------------------------------------------|----------------------------|
 | Laravel       | [10](laravel/10), [11](laravel/11), [12](laravel/12) | [`/laravel/`](laravel)     |
 | Symfony       | [5](symfony/5), [6](symfony/6), [7](symfony/7)       | [`/symfony/`](symfony)     |
-| React         | [18](react/18), [19](react/19)                     | [`/react/`](react)         |
-| Next.js       | [13](nextjs/13), [14](nextjs/14)                   | [`/nextjs/`](nextjs)       |
-| NestJS        | [9](nestjs/9), [10](nestjs/10)                     | [`/nestjs/`](nestjs)       |
-| Astro         | [4](astro/4)                                      | [`/astro/`](astro)         |
-| Vue.js        | [2](vue/2), [3](vue/3)                            | [`/vue/`](vue)             |
-| Express.js    | [4](express/4), [5](express/5) *(future-proof)*   | [`/express/`](express)     |
-| Django        | [4](django/4), [5](django/5)                      | [`/django/`](django)       |
-| Ruby on Rails | [7](ruby/7), [8](ruby/8) *(pre-release ready)*  | [`/ruby/`](ruby)         |
-| Static HTML    | [1](html)                                 | [`/html/`](html)           |
+| React         | [18](react/18), [19](react/19)                       | [`/react/`](react)         |
+| Next.js       | [13](nextjs/13), [14](nextjs/14)                     | [`/nextjs/`](nextjs)       |
+| NestJS        | [9](nestjs/9), [10](nestjs/10)                       | [`/nestjs/`](nestjs)       |
+| Astro         | [4](astro/4) , [5](astro/5)                          | [`/astro/`](astro)         |
+| Vue.js        | [2](vue/2), [3](vue/3)                               | [`/vue/`](vue)             |
+| Express.js    | [4](express/4), [5](express/5) *(future-proof)*      | [`/express/`](express)     |
+| Django        | [4](django/4), [5](django/5)                         | [`/django/`](django)       |
+| Ruby on Rails | [7](ruby/7), [8](ruby/8) *(pre-release ready)*       | [`/ruby/`](ruby)           |
+| Static HTML   | [1](html)                                            | [`/html/`](html)           |
 
 
 
