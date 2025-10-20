@@ -18,6 +18,3 @@ If you don't already have a React 19 app, you can create one like this:
 
 npx create-react-app@next my-react19-app
 cd my-react19-app
-
-
-docker-compose up -d --build

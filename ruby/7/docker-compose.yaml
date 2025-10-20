@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: rails7-app
+    ports:
+      - "3000"
+    volumes:
+      - .:/app
+    environment:
+      - RAILS_ENV=development
+      - DATABASE_HOST=db
+      - DATABASE_USERNAME=rails_user
+      - DATABASE_PASSWORD=rails_password
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14
+    container_name: rails7-db
+    environment:
+      POSTGRES_DB: rails_db
+      POSTGRES_USER: rails_user
+      POSTGRES_PASSWORD: rails_password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432"
+
+volumes:
+  pgdata:
+    driver: local

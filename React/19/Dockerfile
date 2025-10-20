@@ -1,23 +1,26 @@
-# Use official Node.js LTS image (adjust version if needed)
+# Use official Node.js image (LTS)
 FROM node:20-alpine
 
-# Set working directory inside container
+# Set working directory
 WORKDIR /app
 
-# Copy package files (this assumes user has already created a React 19 app)
+# Copy package.json and package-lock.json first for caching
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the app
+# Copy the rest of the app source code
 COPY . .
 
-# Build the React app for production (optional if using dev server)
+# Build React app for production
 RUN npm run build
 
-# Expose the React development server port
+# Serve production build using a lightweight web server (serve)
+RUN npm install -g serve
+
+# Expose port 3000
 EXPOSE 3000
 
-# Start the app (change to npm run start if needed)
-CMD ["npm", "start"]
+# Start the app
+CMD ["serve", "-s", "build", "-l", "3000"]
