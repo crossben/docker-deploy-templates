@@ -58,7 +58,7 @@ To use these Docker templates:
 | Vue.js        | [2](vue/2), [3](vue/3)                            | [`/vue/`](vue)             |
 | Express.js    | [4](express/4), [5](express/5) *(future-proof)*   | [`/express/`](express)     |
 | Django        | [4](django/4), [5](django/5)                      | [`/django/`](django)       |
-| Ruby on Rails | [7](rails/7), [8](rails/8) *(pre-release ready)*  | [`/rails/`](rails)         |
+| Ruby on Rails | [7](ruby/7), [8](ruby/8) *(pre-release ready)*  | [`/ruby/`](ruby)         |
 
 
 
