@@ -1,13 +1,11 @@
 <p align="center">
-  <img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel" width="40" />
-  <img src="https://cdn.simpleicons.org/symfony/000000" alt="Symfony" width="40" />
-  <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" />
-  <img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="Next.js" width="40" />
-  <img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS" width="40" />
-  <img src="https://cdn.simpleicons.org/astro/FF5D01" alt="Astro" width="40" />
+    <img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel" width="40" />
+    <img src="https://cdn.simpleicons.org/symfony/FFFFFF" alt="Symfony" width="40" />
+    <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" />
+    <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="Next.js" width="40" />
+    <img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS" width="40" />
+    <img src="https://cdn.simpleicons.org/astro/FF5D01" alt="Astro" width="40" />
 </p>
-
-
 
 # 🚀 Docker Boilerplates for Your Web Projects
 
