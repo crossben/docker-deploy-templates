@@ -1,39 +1,40 @@
-# Use official PHP Apache base image
-# this is the same as symfony/6 and symfony/7 unless you want to use a different PHP version then change 8.1 to your desired version
-FROM php:8.1-apache
+# Use PHP 8.1 with Apache
+FROM php:8.2-apache
 
-# Install dependencies and PHP extensions needed for Symfony
+# Install system dependencies + PHP extensions for Symfony
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
     zip \
     curl \
     libicu-dev \
-    libpq-dev \
     libzip-dev \
     libonig-dev \
+    libpq-dev \
     && docker-php-ext-install intl pdo pdo_mysql zip opcache
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Set working directory inside the container
+# Set Apache DocumentRoot to Symfony /public folder
+RUN sed -ri -e 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
+
+# Set working directory
 WORKDIR /var/www/html
 
-# Copy project files (can be skipped if using volume)
-COPY . /var/www/html
+# Copy project files into the container
+COPY . .
 
-# Set permissions (adjust as needed for your Symfony setup)
-# if this does not work, you might need to connect to the container and run these commands manually
-# docker exec -it your-container-name or id bash , then run the commands below
+# Fix permissions for Symfony (cache, logs, public)
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 775 /var/www/html/var
+    && chmod -R 755 /var/www/html \
+    && chmod -R 775 /var/www/html/var /var/www/html/public
 
-# Install Composer
+# Install Composer globally
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Expose Apache port
+# Expose port
 EXPOSE 80
 
-# Start Apache
+# Start Apache server
 CMD ["apache2-foreground"]
